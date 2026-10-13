@@ -1,0 +1,10 @@
+{
+  "description": "Illustrative synthetic collection profile for future non-major sales cohorts.",
+  "timing_buckets": [
+    {"bucket": "weeks_0_2", "min_lag_weeks": 0, "max_lag_weeks": 2, "collection_share": 0.50},
+    {"bucket": "weeks_3_5", "min_lag_weeks": 3, "max_lag_weeks": 5, "collection_share": 0.30},
+    {"bucket": "weeks_6_9", "min_lag_weeks": 6, "max_lag_weeks": 9, "collection_share": 0.15},
+    {"bucket": "beyond_horizon", "min_lag_weeks": 10, "max_lag_weeks": null, "collection_share": 0.05}
+  ],
+  "share_tolerance": 0.000001
+}

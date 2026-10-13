@@ -1,0 +1,3 @@
+# Runtime dashboard dependencies; financial calculations use Python standard library.
+pandas==2.3.3
+streamlit==1.50.0

@@ -1,0 +1,12 @@
+{
+  "forecast_start_date": "2026-10-12",
+  "opening_cash": 420000.00,
+  "minimum_cash_reserve": 150000.00,
+  "currency": "SGD",
+  "horizon_weeks": 13,
+  "protected_payment_categories": ["Payroll", "Taxes", "Debt Repayment", "Statutory Dues"],
+  "designated_major_customer_id": "CUST_MAJOR_001",
+  "designated_major_receipt_id": "RCPT_MAJOR_001",
+  "ad_hoc_baseline_min_weeks": 13,
+  "ad_hoc_baseline_preferred_weeks": 26
+}

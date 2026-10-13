@@ -1,0 +1,23 @@
+{
+  "overall_status": "Valid",
+  "files_checked": [
+    "forecast_config.json",
+    "collection_assumptions.json",
+    "customer_receipts.csv",
+    "known_payments.csv",
+    "historical_claims_payroll.csv",
+    "forecast_payroll.csv",
+    "forecast_non_major_sales.csv",
+    "historical_adhoc_payments.csv"
+  ],
+  "issues": [
+    {
+      "status": "Valid",
+      "file_name": "all_inputs",
+      "field_or_rule": "input_contracts",
+      "message": "All required input contracts passed validation.",
+      "correction": "",
+      "component": "input"
+    }
+  ]
+}

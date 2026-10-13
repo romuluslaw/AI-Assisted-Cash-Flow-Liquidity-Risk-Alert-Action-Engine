@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "analysis_type": "synthetic_liquidity_risk_cfo_briefing",
+  "authority": "Python financial outputs are authoritative; AI must not recalculate figures.",
+  "human_review_required": true,
+  "external_calls_performed": false,
+  "validation": {
+    "overall_status": "Valid"
+  },
+  "base_case": {
+    "opening_cash": "420000.00",
+    "minimum_cash_reserve": "150000.00",
+    "lowest_cash": "341057.71",
+    "lowest_cash_week": 2,
+    "reconciliation_status": "Reconciled"
+  },
+  "selected_scenario": {
+    "scenario_id": "base",
+    "description": "Base case",
+    "lowest_cash": "341057.71",
+    "lowest_cash_week": 2,
+    "first_breach_week": null,
+    "maximum_reserve_shortfall": "0.00",
+    "breach_week_count": 0,
+    "recovery_week": null,
+    "reconciliation_status": "Reconciled"
+  },
+  "scenario_comparison": [
+    {
+      "scenario_id": "base",
+      "description": "Base case",
+      "lowest_cash": "341057.71",
+      "lowest_cash_week": 2,
+      "first_breach_week": null,
+      "maximum_reserve_shortfall": "0.00",
+      "breach_week_count": 0,
+      "recovery_week": null,
+      "reconciliation_status": "Reconciled"
+    },
+    {
+      "scenario_id": "customer_delay",
+      "description": "Major customer receipt delayed 7 days",
+      "lowest_cash": "146388.77",
+      "lowest_cash_week": 4,
+      "first_breach_week": 4,
+      "maximum_reserve_shortfall": "3611.23",
+      "breach_week_count": 1,
+      "recovery_week": 5,
+      "reconciliation_status": "Reconciled"
+    },
+    {
+      "scenario_id": "supplier_deferral",
+      "description": "Eligible supplier payments deferred 7 days",
+      "lowest_cash": "358253.24",
+      "lowest_cash_week": 3,
+      "first_breach_week": null,
+      "maximum_reserve_shortfall": "0.00",
+      "breach_week_count": 0,
+      "recovery_week": null,
+      "reconciliation_status": "Reconciled"
+    },
+    {
+      "scenario_id": "combined_stress",
+      "description": "Combined: customer delay 7 days and supplier deferral 7 days",
+      "lowest_cash": "351388.77",
+      "lowest_cash_week": 4,
+      "first_breach_week": null,
+      "maximum_reserve_shortfall": "0.00",
+      "breach_week_count": 0,
+      "recovery_week": null,
+      "reconciliation_status": "Reconciled"
+    },
+    {
+      "scenario_id": "accelerated_receipt_action",
+      "description": "Separate hypothetical action: 8 eligible invoice(s) accelerated 7 days",
+      "lowest_cash": "371057.71",
+      "lowest_cash_week": 2,
+      "first_breach_week": null,
+      "maximum_reserve_shortfall": "0.00",
+      "breach_week_count": 0,
+      "recovery_week": null,
+      "reconciliation_status": "Reconciled"
+    }
+  ],
+  "scenario_parameters": {
+    "customer_delay_days": 7,
+    "supplier_deferral_days": 7,
+    "accelerated_receipt_days": 7,
+    "protected_payment_categories": [
+      "Debt Repayment",
+      "Payroll",
+      "Statutory Dues",
+      "Taxes"
+    ]
+  },
+  "accelerated_receipt_register": [
+    {
+      "invoice_reference": "RCPT_MAJOR_001",
+      "customer_id": "CUST_MAJOR_001",
+      "outstanding_amount": "280000.00",
+      "original_expected_receipt_date": "2026-11-04",
+      "hypothetical_accelerated_date": "2026-10-28",
+      "days_brought_forward": 7,
+      "eligible_candidate": true,
+      "selected_for_action": true,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Illustrative candidate: positive invoice-backed receipt; original and accelerated dates remain within forecast horizon."
+    },
+    {
+      "invoice_reference": "RCPT_KNOWN_01",
+      "customer_id": "CUST_002",
+      "outstanding_amount": "28000.00",
+      "original_expected_receipt_date": "2026-10-14",
+      "hypothetical_accelerated_date": "2026-10-07",
+      "days_brought_forward": 0,
+      "eligible_candidate": false,
+      "selected_for_action": false,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Excluded: amount/date does not meet the documented eligibility rule."
+    },
+    {
+      "invoice_reference": "RCPT_KNOWN_02",
+      "customer_id": "CUST_003",
+      "outstanding_amount": "22000.00",
+      "original_expected_receipt_date": "2026-10-21",
+      "hypothetical_accelerated_date": "2026-10-14",
+      "days_brought_forward": 7,
+      "eligible_candidate": true,
+      "selected_for_action": true,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Illustrative candidate: positive invoice-backed receipt; original and accelerated dates remain within forecast horizon."
+    },
+    {
+      "invoice_reference": "RCPT_KNOWN_03",
+      "customer_id": "CUST_004",
+      "outstanding_amount": "30000.00",
+      "original_expected_receipt_date": "2026-10-28",
+      "hypothetical_accelerated_date": "2026-10-21",
+      "days_brought_forward": 7,
+      "eligible_candidate": true,
+      "selected_for_action": true,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Illustrative candidate: positive invoice-backed receipt; original and accelerated dates remain within forecast horizon."
+    },
+    {
+      "invoice_reference": "RCPT_KNOWN_05",
+      "customer_id": "CUST_002",
+      "outstanding_amount": "26000.00",
+      "original_expected_receipt_date": "2026-11-11",
+      "hypothetical_accelerated_date": "2026-11-04",
+      "days_brought_forward": 7,
+      "eligible_candidate": true,
+      "selected_for_action": true,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Illustrative candidate: positive invoice-backed receipt; original and accelerated dates remain within forecast horizon."
+    },
+    {
+      "invoice_reference": "RCPT_KNOWN_07",
+      "customer_id": "CUST_004",
+      "outstanding_amount": "24000.00",
+      "original_expected_receipt_date": "2026-11-25",
+      "hypothetical_accelerated_date": "2026-11-18",
+      "days_brought_forward": 7,
+      "eligible_candidate": true,
+      "selected_for_action": true,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Illustrative candidate: positive invoice-backed receipt; original and accelerated dates remain within forecast horizon."
+    },
+    {
+      "invoice_reference": "RCPT_KNOWN_09",
+      "customer_id": "CUST_002",
+      "outstanding_amount": "32000.00",
+      "original_expected_receipt_date": "2026-12-09",
+      "hypothetical_accelerated_date": "2026-12-02",
+      "days_brought_forward": 7,
+      "eligible_candidate": true,
+      "selected_for_action": true,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Illustrative candidate: positive invoice-backed receipt; original and accelerated dates remain within forecast horizon."
+    },
+    {
+      "invoice_reference": "RCPT_KNOWN_11",
+      "customer_id": "CUST_004",
+      "outstanding_amount": "27000.00",
+      "original_expected_receipt_date": "2026-12-23",
+      "hypothetical_accelerated_date": "2026-12-16",
+      "days_brought_forward": 7,
+      "eligible_candidate": true,
+      "selected_for_action": true,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Illustrative candidate: positive invoice-backed receipt; original and accelerated dates remain within forecast horizon."
+    },
+    {
+      "invoice_reference": "RCPT_KNOWN_13",
+      "customer_id": "CUST_002",
+      "outstanding_amount": "25000.00",
+      "original_expected_receipt_date": "2027-01-06",
+      "hypothetical_accelerated_date": "2026-12-30",
+      "days_brought_forward": 7,
+      "eligible_candidate": true,
+      "selected_for_action": true,
+      "confirmation_status": "Hypothetical — not confirmed",
+      "eligibility_rationale": "Illustrative candidate: positive invoice-backed receipt; original and accelerated dates remain within forecast horizon."
+    }
+  ],
+  "constraints": [
+    "Do not invent facts, probabilities, customer commitments or supplier approvals.",
+    "Use only the supplied evidence; distinguish facts, estimates and assumptions.",
+    "Use Finding -> Evidence -> Risk -> Recommended management action.",
+    "Recommend no more than two actions and state required human confirmations.",
+    "Do not alter or recalculate any financial metric."
+  ],
+  "model_settings": {
+    "model_name": "gemma4:latest",
+    "num_ctx": 8192,
+    "num_predict": 1000,
+    "timeout_seconds": 300,
+    "token_estimate_method": "ceil(characters / 3) of the pre-formatted facts plus a fixed instruction allowance; rough planning estimate only"
+  },
+  "model_view": {
+    "prompt_facts": "SCENARIO UNDER REVIEW: Base case\nWhat changes in this scenario: No stress or action applied; this is the baseline forecast.\nOpening cash: SGD 420.0k. Minimum cash reserve: SGD 150.0k. Horizon: 13 weeks.\n\nKEY FIGURES FOR THIS SCENARIO:\n- Base case: reserve maintained; lowest closing cash SGD 341.1k in Week 2, SGD 191.1k above the SGD 150.0k reserve.\n\nOTHER CASES (context only):\n- Customer delay: reserve breached from Week 4; lowest closing cash SGD 146.4k in Week 4, SGD 3.6k below the SGD 150.0k reserve; below reserve for 1 week(s); back above reserve in Week 5. Lowest cash is SGD 194.7k lower than the base case (SGD 341.1k).\n- Supplier deferral: reserve maintained; lowest closing cash SGD 358.3k in Week 3, SGD 208.3k above the SGD 150.0k reserve. Lowest cash is SGD 17.2k higher than the base case (SGD 341.1k).\n- Combined stress: reserve maintained; lowest closing cash SGD 351.4k in Week 4, SGD 201.4k above the SGD 150.0k reserve. Lowest cash is SGD 10.3k higher than the base case (SGD 341.1k).\n- Accelerated receipt action: reserve maintained; lowest closing cash SGD 371.1k in Week 2, SGD 221.1k above the SGD 150.0k reserve. Lowest cash is SGD 30.0k higher than the base case (SGD 341.1k).\n\nMANAGEMENT LEVERS ALREADY MODELLED:\n- Bringing 8 eligible invoices (SGD 466.0k in total) forward by 7 days is modelled as a separate hypothetical action; lowest cash would be SGD 371.1k in Week 2. It moves timing only and needs customer agreement.\n- Deferring eligible supplier payments is a timing change only and needs supplier agreement; payroll, tax, statutory dues and debt repayment are protected."
+  },
+  "prompt_budget": {
+    "estimated_input_tokens": 1037,
+    "context_tokens": 8192,
+    "reserved_output_tokens": 1000,
+    "estimated_total_budget": 2037,
+    "within_configured_context": true,
+    "warning": "Estimate is heuristic; exact tokenization requires the selected model."
+  }
+}

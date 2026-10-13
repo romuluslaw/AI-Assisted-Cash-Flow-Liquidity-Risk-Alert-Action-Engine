@@ -1,0 +1,28 @@
+{
+  "finding": "Cash is SGD 351.4k versus a SGD 150.0k reserve.",
+  "evidence": [
+    "Lowest cash is SGD 351.4k in Week 4."
+  ],
+  "risk": "No breach.",
+  "recommended_management_action": [
+    "Treasury to confirm supplier timing."
+  ],
+  "limitations": [
+    "Synthetic data."
+  ],
+  "human_review_required": true,
+  "status": "OLLAMA_LOCAL_VALIDATED",
+  "ai_called": true,
+  "model_name": "gemma4:latest",
+  "generation_seconds": 0.0,
+  "ollama_total_duration_seconds": 50.0,
+  "ollama_load_duration_seconds": 1.0,
+  "prompt_eval_count": 1100,
+  "generation_eval_count": 200,
+  "prompt_estimated_tokens": 1040,
+  "context_tokens": 8192,
+  "reserved_output_tokens": 1000,
+  "thinking_requested": false,
+  "retry_used": false,
+  "external_calls_performed": false
+}
